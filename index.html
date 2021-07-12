@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-environment-component/dist/aframe-environment-component.min.js"></script>
+
+
+    <title>L01</title>
+</head>
+<body>
+    <a-scene>
+
+        <a-assets>
+            <img id="Grass" src="Image/Map1/TileMap-Grass.png">
+            <img id="360-panorama" src="L12-IMGs/360-panorama.jpg">
+        </a-assets>
+
+        <!-- <a-entity environment></a-entity> -->
+
+      <a-entity>
+        <a-box color="#ffffff"
+               src="Image/Map1/TileMap-soil.png"
+               width="50" height="50" depth="3"
+               position="6 0 -30">
+        </a-box>
+        <a-box color="#ffffff"
+               src="Image/Map1/TileMap-soil.png"
+               width="50" height="50" depth="3"
+               position="56 0 -30">
+        </a-box>
+        <a-box color="#ffffff"
+               src="Image/Map1/TileMap-soil.png"
+               width="50" height="50" depth="3"
+               position="-44 0 -30">
+        </a-box>
+        <a-box color="#ffffff"
+               src="Image/Map1/TileMap-soil.png"
+               width="50" height="50" depth="3"
+               position="-68 0 -4" rotation="0 90 0">
+        </a-box>
+        <a-box color="#ffffff"
+               src="Image/Map1/TileMap-soil.png"
+               width="50" height="50" depth="3"
+               position="-68 0 45" rotation="0 90 0">
+        </a-box>
+        <a-box color="#ffffff"
+               src="Image/Map1/TileMap-soil.png"
+               width="50" height="50" depth="3"
+               position="68 0 -5" rotation="0 90 0">
+        </a-box>
+        <a-box color="#ffffff"
+               src="Image/Map1/TileMap-soil.png"
+               width="50" height="50" depth="3"
+               position="68 0 45" rotation="0 90 0">
+        </a-box>
+        <a-box color="#ffffff"
+               src="Image/Map1/TileMap-soil.png"
+               width="50" height="50" depth="3"
+               position="0 0 60" rotation="0 0 0">
+        </a-box>
+        <a-box color="#ffffff"
+               src="Image/Map1/TileMap-soil.png"
+               width="50" height="50" depth="3"
+               position="44 0 60" rotation="0 0 0">
+        </a-box>
+        <a-box color="#ffffff"
+               src="Image/Map1/TileMap-soil.png"
+               width="50" height="50" depth="3"
+               position="-44 0 60" rotation="0 0 0">
+        </a-box>
+
+        <!-- <a-box color="red"
+               width="4" height="4" depth="4"
+               position="6 0 0">
+        </a-box> -->
+
+    </a-entity>
+
+    <a-plane material="color: #ffffff; src:#Grass"
+             rotation="-90 0 0"
+             scale="150 150 150" 
+             repeat="5 5">
+    </a-plane>
+
+
+    <a-sky src="360-panorama"></a-sky>
+
+    <a-camera position="5 5 20"></a-camera>
+
+    </a-scene>
+    
+</body>
+</html>
