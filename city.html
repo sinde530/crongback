@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+
+    <script src="aframe.min.js"></script>
+
+
+    
+    <title>Document</title>
+</head>
+<body>
+    <a-scene>
+        <a-assets>
+          <a-asset-item id="city-obj" src="models/city.obj"></a-asset-item>
+          <a-asset-item id="city-mtl" src="models/city.mtl"></a-asset-item>
+          <!-- <audio autoplay loop src="audio/237329__fyono__night-city-atmosphere.wav"></audio> -->
+        </a-assets>
+  
+        <!-- Model. -->
+        <a-entity obj-model="obj: #city-obj; mtl: #city-mtl" position="0 -1 -5"></a-entity>
+  
+        <!-- Lights. -->
+        <a-light type="ambient" color="#222"></a-light>
+        <a-light type="point" position="-3 5 -10">
+          <a-animation attribute="intensity" from="1" to="0.8" direction="alternate"
+                       repeat="indefinite" dur="3000"></a-animation>
+        </a-light>
+      </a-scene>
+</body>
+</html>
