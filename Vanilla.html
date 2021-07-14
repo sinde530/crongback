@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://aframe.io/releases/0.3.0/aframe.min.js"></script> 
+     <script src="https://unpkg.com/aframe-template-component@^3.1.1/dist/aframe-template-component.min.js"></script> 
+    <title>Document</title>
+    
+</head>
+<body>
+
+    <a-scene>
+        <a-assets>
+
+            <script id="butterflies" type="text/x-nujucks-template"></script>
+            {% for x in range(0, 10) %}
+              {% for z in range(0, 10) %}
+              <a-entity template="src: butterfly.template; type:handlebars" data-position="{{ x * 10 }} 1 {{ z * 10}}"></a-entity>
+            {% endfor %}
+              {% endfor %}
+            </script>
+
+            <script id="forest" type="text/x-nunjecks-template">
+                {% for x in range(0, 10) %}
+                  {% for z in range(0, 10) %}
+                  <a-entity template="src: tree.template; type: handlebars; data: tree-data"
+                      data-position="{{ x * 10 }} 0 {{ z * 10 }}"
+                      tree-data="trunkColor: #623B1C; leaves: 500"></a-entity>
+          {% endfor %}
+        {% endfor %}
+            </script>
+
+            <a-entity template="src: #forest"></a-entity>
+    <a-entity template="src: #butterflies"></a-entity>
+    <a-entity template="src: #clouds"></a-entity>
+
+            
+        </a-assets>
+
+        <a-entity template="src: #boxesTemplate"
+            data-box1color="red" data-box2color="green" data-box3color="blue"></a-entity>
+    </a-scene>
+    
+</body>
+
+</html>
