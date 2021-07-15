@@ -4,45 +4,99 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://aframe.io/releases/0.3.0/aframe.min.js"></script> 
-     <script src="https://unpkg.com/aframe-template-component@^3.1.1/dist/aframe-template-component.min.js"></script> 
-    <title>Document</title>
+
+    <!-- <script src="https://aframe.io/releases/0.3.0/aframe.min.js"></script>  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aframe/0.7.1/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-environment-component@1.1.0/dist/aframe-environment-component.min.js"></script>
+    <script src="https://codechangers.com/physics.js"></script>
+    <!-- <script src="https://codechangers.com/camps2019/vr/shoot-partial.js"></script> -->
     
-</head>
-<body>
+    <!-- <script src="https://www.codechangers.com/lessons/vr/aframe/physics.js"></script> -->
+    <script src="https://codechangers.com/shoot-full.js"></script>
 
-    <a-scene>
-        <a-assets>
 
-            <script id="butterflies" type="text/x-nujucks-template"></script>
-            {% for x in range(0, 10) %}
-              {% for z in range(0, 10) %}
-              <a-entity template="src: butterfly.template; type:handlebars" data-position="{{ x * 10 }} 1 {{ z * 10}}"></a-entity>
-            {% endfor %}
-              {% endfor %}
-            </script>
 
-            <script id="forest" type="text/x-nunjecks-template">
-                {% for x in range(0, 10) %}
-                  {% for z in range(0, 10) %}
-                  <a-entity template="src: tree.template; type: handlebars; data: tree-data"
-                      data-position="{{ x * 10 }} 0 {{ z * 10 }}"
-                      tree-data="trunkColor: #623B1C; leaves: 500"></a-entity>
-          {% endfor %}
-        {% endfor %}
-            </script>
 
-            <a-entity template="src: #forest"></a-entity>
-    <a-entity template="src: #butterflies"></a-entity>
-    <a-entity template="src: #clouds"></a-entity>
-
-            
-        </a-assets>
-
-        <a-entity template="src: #boxesTemplate"
-            data-box1color="red" data-box2color="green" data-box3color="blue"></a-entity>
-    </a-scene>
+    <script src="js/Vanilla.js"></script>
     
+    
+    <title>Shooting Game</title>
+    
+  </head>
+  <body>
+    
+    <a-scene id="myScene">
+      <a-camera id="myCamera">
+        <a-cursor intersection-spawn="Event: click; mixin:voxel:" ></a-cursor>
+      </a-camera>
+      
+      <a-entity environment ="preset:tron;"></a-entity>
+      <a-plane id="floor" static-body height="100" width="100" position="0 -02 0" color="black" rotation="-90 0 0"  ></a-plane>
+      
+      
+<a-camera pointer-lock-enabled="true" position="0 1 0" id="myCamera">
+  <a-cursor fuse="true"></a-cursor>
+</a-camera>
+
+
+
+      <a-box static-body position="0 0.5 -7" width="100" radius="100" rotation="0 0 0"></a-box>
+
+
+      <a-entity class="shooter-box">
+        <a-entity dynamic-body id="box1"
+        position="0 3.5 -7"
+        geometry="primitive: box"
+          material="color: red">
+        </a-entity>
+         
+        <a-entity dynamic-body id="box1"
+          position="-2 5.5 -7"
+          geometry="primitive: box"
+          material="color: blue">
+        </a-entity>
+        
+        <a-entity dynamic-body id="box1"
+          position="-4 3.5 -7"
+          geometry="primitive: box"
+          material="color: red">
+        </a-entity>
+        
+        <a-entity dynamic-body id="box1"
+          position="2 5.5 -7"
+          geometry="primitive: box"
+          material="color: blue">
+        </a-entity>
+  
+        <a-entity dynamic-body id="box1"
+          position="4 5.5 -7"
+          geometry="primitive: box"
+          material="color: blue">
+        </a-entity>
+      </a-entity>
+      
+      <a-icosahedron dynamic-body static-body class="target" class="white" radius="1" position="0 10 -7" ></a-icosahedron>
+      <a-icosahedron dynamic-body static-body class="target" class="white" radius="1" position="0 10 -7" ></a-icosahedron>
+      <a-icosahedron dynamic-body static-body class="target" class="white" radius="1" position="0 10 -7" ></a-icosahedron>
+      <a-icosahedron dynamic-body static-body class="target" class="white" radius="1" position="0 10 -7" ></a-icosahedron>
+      <a-icosahedron dynamic-body static-body class="target" class="white" radius="1" position="0 10 -7" ></a-icosahedron>
+
+      <!-- <a-entity id="boxHl"></a-entity> -->
+      
+      
+      
+      <!-- Camera Holding -->
+      <!-- <a-entity camera="active=true" position="0 2 8"></a-entity> -->
+
+
+  </a-scene>
+  
 </body>
 
 </html>
+
+
+align-text css Name 변경 28px down
+margin 
+이용권 결제를 통해 ~ down
+
