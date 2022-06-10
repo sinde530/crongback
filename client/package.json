@@ -24,7 +24,13 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "lint": "eslint src"
+  },
+  "lint-staged": {
+  "src/**/*.{ts,js,tsx}" : [
+    "yarn lint"
+    ]
   },
   "eslintConfig": {
     "extends": [
@@ -56,6 +62,7 @@
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.28.0",
     "eslint-plugin-react-hooks": "^4.3.0",
+    "lint-staged": "^13.0.1",
     "prettier": "^2.6.2"
   }
 }
