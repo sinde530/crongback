@@ -1,5 +1,12 @@
 import { useCallback, useState } from 'react';
 
+import styled from '@emotion/styled';
+
+const Container = styled.div({
+  width: '100%',
+  margin: '0 auto',
+});
+
 export default function SignUp() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -44,7 +51,7 @@ export default function SignUp() {
   }, [name, email, password, passwordCheck]);
 
   return (
-    <div>
+    <Container>
       <h2>Sign Up</h2>
       <form onSubmit={onSubmit}>
         <div>
@@ -94,6 +101,6 @@ export default function SignUp() {
           <button type="submit">submit</button>
         </div>
       </form>
-    </div>
+    </Container>
   );
 }

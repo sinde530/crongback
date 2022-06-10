@@ -11,6 +11,7 @@ git push origin typescript
 > yarn create @eslint/config
 > yarn add -D eslint-config-airbnb-typescript
 > yarn add react-router-dom
+> yarn @emotion/styled @emotion/react
 
 ## * eslint.json modify
 ```json
