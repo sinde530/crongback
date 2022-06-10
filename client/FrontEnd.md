@@ -1,7 +1,7 @@
 # React-TypeScript
 
 git add .
-git commit -m "[client]: Router write"
+git commit -m "[client]: "
 git push origin typescript
 
 ## Install
