@@ -1,0 +1,3 @@
+## install
+> mongoose @types/mongoose
+
