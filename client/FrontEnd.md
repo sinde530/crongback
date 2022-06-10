@@ -10,6 +10,7 @@ git push origin typescript
 > yarn add redux react-redux @types/react-redux
 > yarn create @eslint/config
 > yarn add -D eslint-config-airbnb-typescript
+> yarn add react-router-dom
 
 ## * eslint.json modify
 ```json
@@ -85,4 +86,18 @@ git push origin typescript
         "react/button-has-type": "off"
     }
 }
+```
+
+## BrowserRouter Write
+
+```typescript
+src/index.tsx
+
+import { BrowserRouter } from 'react-router-dom';
+
+root.render(
+  <BrowserRouter>
+    <App />
+  </BrowserRouter>,
+);
 ```
