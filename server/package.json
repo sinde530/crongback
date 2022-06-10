@@ -2,7 +2,7 @@
   "name": "server",
   "version": "1.0.0",
   "description": "server",
-  "main": "index.js",
+  "main": "index.ts",
   "author": "server",
   "license": "MIT",
   "devDependencies": {
@@ -12,5 +12,10 @@
     "nodemon": "^2.0.16",
     "ts-node": "^10.8.1",
     "typescript": "^4.7.3"
+  },
+  "scripts": {
+    "start": "node dist/index.ts",
+    "build": "tsc -p .",
+    "dev": "nodemon --watch \"src/**/*.ts\" --exec \"ts-node\" src/index.ts"
   }
 }

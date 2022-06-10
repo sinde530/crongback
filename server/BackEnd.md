@@ -6,6 +6,7 @@
 
 ```typescript
 yarn add -D express typescript ts-node nodemon @types/node @types/express
+yarn add @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint eslint-config-prettier eslint-plugin-prettier prettier
 ```
 
 ## 3.tsconfig.json file create.
