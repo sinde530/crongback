@@ -10,3 +10,6 @@
 
 ## Tsconfig Setting
 > yarn tsc --init
+
+[tsconfig-setting-site](https://geonlee.tistory.com/214)
+
