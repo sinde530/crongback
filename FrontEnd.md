@@ -1,7 +1,7 @@
 # React-TypeScript
 
 git add .
-git commit -m "[client]: yarn add -D eslint-config-airbnb-typescript"
+git commit -m "[client]: eslint.json modify"
 git push origin typescript
 
 ## Install
