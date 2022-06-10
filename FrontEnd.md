@@ -1,7 +1,7 @@
 # React-TypeScript
 
 git add .
-git commit -m "[client]: eslint.json modify"
+git commit -m "[client]: yarn add -D eslint-config-airbnb-typescript"
 git push origin typescript
 
 ## Install
@@ -9,6 +9,7 @@ git push origin typescript
 > yarn add typescript @types/node @types/react @types/react-dom @types/jest
 > yarn add redux react-redux @types/react-redux
 > yarn create @eslint/config
+> yarn add -D eslint-config-airbnb-typescript
 
 ## * eslint.json modify
 ```json
