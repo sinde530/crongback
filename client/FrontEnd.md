@@ -138,3 +138,16 @@ const pxToRem = (px: number): string => `${px / 16}rem`;
 export default pxToRem;
 
 ```
+
+## @emotion/styled Enable Multiple
+```typescript
+import styled from '@emotion/styled';
+
+export const [name] = styled.h2`
+    font-size:34px
+`;
+
+export const [name] = styled.div`
+  padding: 8px 8px;
+`;
+```

@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 import {
   Container, Title, Box, Input, Button,
-} from '../../styles/LoginInput';
+} from '../../styles';
 
 export default function SignUp() {
   const [name, setName] = useState('');
