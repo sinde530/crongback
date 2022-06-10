@@ -4,7 +4,8 @@ git add .
 git commit -m "[client]: "
 git push origin typescript
 
-## Install
+## Library Install.
+```typescript
 > yarn create react-app my-app --template typescript
 > yarn add typescript @types/node @types/react @types/react-dom @types/jest
 > yarn add redux react-redux @types/react-redux
@@ -12,6 +13,8 @@ git push origin typescript
 > yarn add -D eslint-config-airbnb-typescript
 > yarn add react-router-dom
 > yarn @emotion/styled @emotion/react
+```
+
 
 ## * eslint.json modify
 ```json
@@ -124,5 +127,14 @@ function App() {
 }
 
 export default App;
+
+```
+
+## pxToRem
+16px을 1rem으로 변경시켜준다.
+```typescript
+const pxToRem = (px: number): string => `${px / 16}rem`;
+
+export default pxToRem;
 
 ```

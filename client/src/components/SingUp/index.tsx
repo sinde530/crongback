@@ -1,11 +1,10 @@
 import { useCallback, useState } from 'react';
 
-import styled from '@emotion/styled';
+import { Link } from 'react-router-dom';
 
-const Container = styled.div({
-  width: '100%',
-  margin: '0 auto',
-});
+import {
+  Container, Title, Box, Input, Button,
+} from '../../styles/LoginInput';
 
 export default function SignUp() {
   const [name, setName] = useState('');
@@ -52,54 +51,56 @@ export default function SignUp() {
 
   return (
     <Container>
-      <h2>Sign Up</h2>
       <form onSubmit={onSubmit}>
-        <div>
-          <input
+        <Title>Sign Up</Title>
+
+        <Box>
+          <Input
             type="text"
             name="name"
             placeholder="name"
             value={name}
             onChange={onClickName}
           />
-        </div>
+        </Box>
 
-        <div>
-          <input
+        <Box>
+          <Input
             type="email"
             name="email"
             placeholder="email"
             value={email}
             onChange={onClickEmail}
           />
-        </div>
+        </Box>
 
-        <div>
-          <input
+        <Box>
+          <Input
             type="password"
             name="password"
             placeholder="password"
             value={password}
             onChange={onClickPassword}
           />
-        </div>
+        </Box>
 
-        <div>
-          <input
+        <Box>
+          <Input
             type="password"
             name="passwordCheck"
             placeholder="passwordCheck"
             value={passwordCheck}
             onChange={onClickPasswordCheck}
           />
-        </div>
+        </Box>
         {mismatch && <p>비밀번호가 일치하지 않습니다.</p>}
         {!name && <p>이름을 입력해주세요.</p>}
         {signUpError && <p>{signUpError}</p>}
         {signUpSuccess && <p>회원가입이 되었습니다! 로그인해주세요.</p>}
-        <div>
-          <button type="submit">submit</button>
-        </div>
+        <Box>
+          <Button type="submit">submit</Button>
+          <Link to="/">로그인 화면으로 가기</Link>
+        </Box>
       </form>
     </Container>
   );
