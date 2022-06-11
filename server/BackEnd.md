@@ -64,3 +64,20 @@ Create `Script`
 ## 6.Server Start
 
 > $ yarn dev
+
+## 6.Create Folder nodemon.json
+```typescript
+{
+    "restartable": "rs",
+    "ignore": [".git", "node_modules/", "dist/", "coverage/"],
+    "watch": ["src/"],
+    "execMap": {
+      "ts": "node -r ts-node/register"
+    },
+    "env": {
+      "NODE_ENV": "development"
+    },
+    "ext": "js,json,ts"
+}
+
+```
